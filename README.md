@@ -14,12 +14,24 @@ This project is a part of my **Module 1 Assignment** for building the frontend o
 
 Module1_Assignment/
 ├── index.html
+
+
 ├── css/
+
+
 │ └── style.css
+
 ├── js/
+
+
 │ └── validation.js
+
+
 ├── ts/
+
 │ └── validation.ts
+'
+
 └── tsconfig.json
 
 
