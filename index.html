@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <!-- Linking the external CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="form-container">
+    <!-- Main registration form -->
+    <form id="registrationForm">
+      <h2>User Registration</h2>
+
+      <!-- Name input -->
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+      <div class="error" id="nameError"></div> <!-- Error display -->
+
+      <!-- Email input -->
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+      <div class="error" id="emailError"></div>
+
+      <!-- Password input -->
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+      <div class="error" id="passwordError"></div>
+
+      <!-- Confirm password input -->
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="password" id="confirmPassword" name="confirmPassword">
+      <div class="error" id="confirmPasswordError"></div>
+
+      <!-- Submit button -->
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <!-- Linking external JS file -->
+  <script src="js/validation.js"></script>
+</body>
+</html>

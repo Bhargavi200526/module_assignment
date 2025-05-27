@@ -1,0 +1,86 @@
+/* General body style with black background and centered content */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000; /* black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Form container style with violet theme */
+.form-container {
+  background: linear-gradient(145deg, #7f00ff, #e100ff); /* Violet gradient */
+  padding: 50px;
+  border-radius: 25px;
+  box-shadow: 0 15px 30px rgba(255, 0, 255, 0.3);
+  width: 450px;
+  max-width: 90%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Slight zoom and glow on hover */
+.form-container:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 40px rgba(255, 0, 255, 0.5);
+}
+
+/* Heading style */
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+/* Label style */
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
+  color: #eee;
+}
+
+/* Input styling */
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+  background-color: #f9f9f9;
+}
+
+input:focus {
+  border-color: #9400d3;
+  box-shadow: 0 0 5px #bb00ff;
+}
+
+/* Button style - violet gradient */
+button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: linear-gradient(to right, #4a00e0, #8e2de2);
+  transform: translateY(-3px);
+}
+
+/* Error message style */
+.error {
+  color:black;
+  font-size: 15px;
+  margin-top: 3px;
+}

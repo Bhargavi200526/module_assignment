@@ -1,0 +1,114 @@
+1. Set Up Your Project Environment • Create the Project Folder Structure: o Create a new folder named Module1_Assignment. o Inside this folder, create the following subfolders:  css (to store your CSS files)  js (to store your JavaScript files)  ts (to store your TypeScript files) o Your folder structure should look like this: Module1_Assignment/ ├── index.html ├── css/ ├── js/ └── ts/ • Initialize the Project: o Open your terminal or command prompt. o Navigate to the Module1_Assignment folder. o Initialize a new npm project: npm init -y o Install TypeScript globally if you haven't already: npm install -g typescript o Initialize TypeScript configuration: tsc --init 2. Design the Registration Form (HTML & CSS) • Create index.html: o In the Module1_Assignment folder, create a file named index.html. o Set up the basic HTML structure using the <!DOCTYPE html> declaration. o Within the <body> tag, create a <form> element with the following input fields:  Name:  Email:  Password:  Confirm Password:  Submit Button: • Link the CSS File: o In the <head> section of your index.html, link the CSS file: • Style the Form (style.css): o In the css folder, create a file named style.css. o Add styles to make the form visually appealing:  Center the form on the page.  Use fonts and colors to enhance readability.  Style input fields and buttons for better user interaction. 3. Implement JavaScript Validation • Create validation.js: o In the js folder, create a file named validation.js. o Link this script at the end of your index.html, just before the closing </body> tag: • Add Event Listener for Form Submission: o In validation.js, add an event listener to the form to handle submission: • Implement Validation Rules: o Name Validation:  Check if the name is at least 3 characters long. o Email Validation:  Validate the email format using a regular expression. o Password Validation:  Ensure the password is at least 8 characters long.  Check that the password and confirm password fields match. • Display Error Messages: o Create a function showError to display error messages below each input field. o In your index.html, add a <div> after each input field for error messages: 4. Enhance Validation with TypeScript • Create validation.ts: o In the ts folder, create a file named validation.ts. • Set Up TypeScript Compilation: o Open tsconfig.json and configure it to compile TypeScript files from the ts folder to the js folder: • Rewrite Validation Logic in TypeScript: o Move your validation functions from validation.js to validation.ts. o Ensure Type Safety:  Declare types for variables and function parameters. o Create Interfaces:  Define an interface for user data: o Handle Error Messages Using Enums: o Update the showError Function: • Compile TypeScript to JavaScript: o Run the TypeScript compiler in the terminal: • Test Your Application: o Open index.html in your web browser. o Test each validation scenario to ensure all error messages display correctly. o Fix any errors that arise during compilation or testing. Deliverables • A fully functional registration form with: 1. Valid input validation using JavaScript and TypeScript. 2. Type-safe input handling using TypeScript. 3. Clear and user-friendly validation messages. • Final Folder Structure: Module1_Assignment/ ├── index.html ├── css/ │ └── style.css ├── js/ │ └── validation.js ├── ts/ │ └── validation.ts └── tsconfig.json explain this step by step and also if i want to run the ts script automatically whenever i do the uodates what to do then ..?
+
+
+
+REPLY FROM AI MENTOR:
+
+
+Step-by-Step Guide
+1. Set Up Project Environment
+a. Create the Folder Structure
+Your folders and files should look like this:
+
+Module1_Assignment/
+├── index.html
+├── css/
+├── js/
+└── ts/
+Create a main project folder named Module1_Assignment.
+Inside it, create three folders: css (for styles), js (for JavaScript files), ts (for TypeScript files).
+b. Initialize the Project
+Open terminal/command prompt
+Navigate (cd) into your Module1_Assignment folder.
+cd path/to/Module1_Assignment
+Initialize npm project:
+npm init -y
+Install TypeScript globally (if not installed):
+npm install -g typescript
+Initialize TypeScript configuration:
+tsc --init
+This will create a tsconfig.json file.
+
+2. Design the Registration Form
+a. Create index.html
+Inside Module1_Assignment, make an index.html.
+
+Set up basic HTML, including your form with fields (Name, Email, Password, Confirm Password), and a submit button.
+
+Add a <link> to the CSS file in <head> (pointing to css/style.css).
+
+b. Create and Link CSS
+In the css folder, create style.css.
+Write styles to center the form, style text and controls.
+c. Link JS
+At the end of index.html (just before </body>), add:
+<script src="js/validation.js"></script>
+3. JavaScript Validation
+a. Create validation.js
+Inside the js folder, create validation.js.
+b. Add Event Listener
+In validation.js, add an event listener for the form’s submit event.
+Prevent default submission, run validations.
+c. Implement Validation Rules
+Name: At least 3 characters.
+Email: Use regex to check format.
+Password: Minimum 8 characters, match with confirm field.
+Show errors under each input (add a <div> for errors in your HTML after each input).
+4. TypeScript Enhancement
+a. Create validation.ts
+Inside the ts folder, create validation.ts.
+b. Type Safety
+Declare types for each variable and argument.
+Define an interface for user data.
+Use enums for error messages if needed.
+c. Compile TypeScript → JavaScript
+Configure tsconfig.json so TypeScript files from ts compile into js.
+
+Example snippet to add/modify in tsconfig.json:
+
+{
+  "compilerOptions": {
+    "outDir": "./js",
+    "rootDir": "./ts",
+    ...
+  },
+  "include": ["ts/**/*"]
+}
+Whenever you make changes, compile manually with:
+
+tsc
+5. Automatic TypeScript Compilation (Watch Mode)
+If you want TypeScript to compile your files automatically every time you change/save them, use watch mode:
+
+tsc --watch
+or the shorthand:
+
+tsc -w
+This will watch your TypeScript files and update the compiled JS in real-time.
+6. Test Your Application
+Open index.html in your browser.
+Fill the form with various (invalid/valid) data to check errors.
+Fix any issues found during testing or TypeScript compilation.
+📦 Final Structure
+Module1_Assignment/
+├── index.html
+├── css/
+│   └── style.css
+├── js/
+│   └── validation.js   ← compiled from TypeScript
+├── ts/
+│   └── validation.ts
+└── tsconfig.json
+Summary Table
+Step	Description
+Folder Structure	Set up css, js, ts under main project folder
+Initialize npm & TypeScript	npm init -y, tsc --init, setup tsconfig.json
+HTML & CSS	Write and link index.html, css/style.css
+JS Validation	Write/Link js/validation.js with form validation
+TypeScript Enhancement	Write validation logic in ts/validation.ts, ensure type safety
+Compile TypeScript	Run tsc (manual) or tsc -w (auto) to update JS
+Test	Open in browser and check all scenarios
+Tip:
+Use watch mode (tsc -w) for an efficient development workflow—your JS will always be in sync with your TypeScript as you work!
+
+If you want a more detailed breakdown of any step or have questions about TypeScript setup, just ask!
